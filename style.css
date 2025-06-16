@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+/* 網頁整體背景與字體 */
+body {
+  background-color: #ffffff;
+  font-family: 'Caveat', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(#222 0.5px, transparent 0.5px); /* 黑色點點 */
+  background-size: 16px 16px;
+}
+
+/* 頁首（logo + 搜尋 + 登入） */
+header {
+   background-color: #ffffff;
+  border-bottom: 2px dashed black;
+  box-shadow: none;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 20px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-family: 'Caveat', cursive;
+  font-size: 1.2em;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+/* 整體左右分欄 */
+.container {
+  display: flex;
+  height: calc(100vh - 60px); /* 減掉 header 高度 */
+}
+
+/* 側邊欄（地點/篩選等） */
+aside {
+  width: 250px;
+  background-color: #fff8e7;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  font-size: 1.2em;
+}
+
+.sidebar ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  color: #000000;
+  font-size: 1.1em;
+}
+
+
+/* 主內容區 */
+main {
+  flex: 1;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+/* 家教卡片樣式（奶茶風） */
+.post {
+  background-color: #ffffff;
+  border: 2px dashed black;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.post-left {
+  width: 120px;
+  text-align: center;
+  font-family: 'Caveat', cursive;
+}
+
+.post-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px dashed #bfa67a;
+  margin-bottom: 10px;
+}
+
+.post-left h3 {
+  margin: 5px 0;
+  font-size: 1.3em;
+  color: #000;
+}
+
+.post-left p {
+  margin: 0;
+  font-size: 1em;
+  color: #333;
+}
+
+.post-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.post-details li {
+  margin-bottom: 10px;
+  font-size: 1.1em;
+  color: #3e2f1c;
+}
+
+.post-details a {
+  color: #996633;
+  text-decoration: none;
+}
+
+.post-details a:hover {
+  text-decoration: underline;
+}
+
+
+.post-details strong {
+  color: #a67c52;
+}
+
+/* emoji 按鈕區 */
+.post-actions {
+  margin-top: 15px;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+/* 額外手寫感提示 */
+.handwritten {
+  font-family: "Caveat", cursive;
+  color: red;
+  margin-top: 15px;
+  font-size: 1.3em;
+}
+
+/* 色彩提示 */
+.color-note {
+  margin-top: 10px;
+  color: #6a1b9a;
+  font-size: 1.2em;
+}
+
+/* 電話超連結樣式 */
+.post-details a {
+  color: #996633;
+  text-decoration: none;
+}
+
+.post-details a:hover {
+  text-decoration: underline;
+}
+.sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 2px dashed black;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+

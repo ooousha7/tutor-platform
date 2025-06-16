@@ -1,28 +1,109 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>我的家教網站</title>
-  <link rel="stylesheet" href="style.css"> <!-- 引入 CSS 檔案 -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>家教筆記</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>歡迎來到我的MMMMMMMM家教平台</h1>
-    <nav>
-      <a href="index.html">首頁</a> |
-      <a href="student-form.html">學生填表</a>
-    </nav>
+    <div class="logo">Logo</div>
+    <input type="text" placeholder="搜尋標籤..." class="search-bar">
+    <div class="user-actions">
+      <a href="#">註冊</a> |
+      <a href="#">登入</a>
+      <img src="avatar.png" alt="頭像" class="avatar">
+    </div>
   </header>
 
-  <main>
-    <p>這是一個媒合學生與老師的平台。</p>
-  </main>
+  <div class="container">
+    <aside style="background-color: #e0f9ff; padding: 20px;">
+  <form id="filterForm">
+    <label for="location"><strong>地點</strong></label><br>
+    <select id="location" name="location">
+      <option value="">不限</option>
+      <option value="台北">台北</option>
+      <option value="新北">新北</option>
+      <option value="桃園">桃園</option>
+    </select><br><br>
 
-  <footer>
-    <p>&copy; 2025 家教平台</p>
-  </footer>
+    <label for="mode"><strong>方式</strong></label><br>
+    <select id="mode" name="mode">
+      <option value="">不限</option>
+      <option value="面對面">面對面</option>
+      <option value="視訊">視訊</option>
+    </select><br><br>
 
-  <script src="script.js"></script> <!-- 引入 JS -->
+    <label for="price"><strong>薪水範圍</strong></label><br>
+    <select id="price" name="price">
+      <option value="">不限</option>
+      <option value="600-700">600–700 元</option>
+      <option value="700-800">700–800 元</option>
+      <option value="800+">800 元以上</option>
+    </select><br><br>
+
+    <label for="subject"><strong>科目</strong></label><br>
+    <select id="subject" name="subject">
+      <option value="">不限</option>
+      <option value="英文">英文</option>
+      <option value="日文">日文</option>
+      <option value="程式語言">程式語言</option>
+    </select><br><br>
+
+    <button type="submit">搜尋</button>
+  </form>
+</aside>
+
+
+   <main>
+  <!-- 名片 1 -->
+ <div class="post">
+  <div class="post-body">
+    <!-- 左邊：頭像 + 名字 + 標籤 -->
+    <div class="post-left">
+      <img src="avatar.png" class="post-avatar" />
+      <h3>王小明</h3>
+      <p>誠徵：數學家教</p>
+    </div>
+
+    <!-- 右邊：條列清單 -->
+    <div class="post-details">
+      <ul>
+        <li><strong>科目：</strong>數學</li>
+        <li><strong>地點：</strong>台北市中山區</li>
+        <li><strong>學費：</strong>時薪 600 元</li>
+        <li><strong>電話：</strong><a href="tel:0912345678">0912-345-678</a></li>
+        <li><strong>聯絡時間：</strong>週一至週五 18:00–21:00</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+  <!-- 名片 2 -->
+  <div class="post">
+    <div class="post-header">
+      <img src="avatar.png" class="post-avatar" />
+      <div>
+        <h3>林美麗</h3>
+        <p>誠徵：英文家教</p>
+      </div>
+    </div>
+    <div class="post-details">
+      <p><strong>科目：</strong>英文</p>
+      <p><strong>地點：</strong>新北市新店區</p>
+      <p><strong>學費：</strong>時薪 700 元</p>
+      <p><strong>電話：</strong><a href="tel:0922112233">0922-112-233</a></p>
+      <p><strong>聯絡時間：</strong>週三、週四 19:00-21:30</p>
+    </div>
+    <div class="post-actions">
+      ❤️ 💬 📌
+    </div>
+  </div>
+</main>
+
+    </main>
+  </div>
 </body>
 </html>
