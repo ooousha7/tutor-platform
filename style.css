@@ -1,192 +1,177 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
-
-/* 網頁整體背景與字體 */
-body {
-  background-color: #ffffff;
-  font-family: 'Caveat', cursive, sans-serif;
+/* —— 全域重設 —— */
+* {
   margin: 0;
   padding: 0;
-  background-image: radial-gradient(#222 0.5px, transparent 0.5px); /* 黑色點點 */
-  background-size: 16px 16px;
-}
-
-/* 頁首（logo + 搜尋 + 登入） */
-header {
-   background-color: #ffffff;
-  border-bottom: 2px dashed black;
-  box-shadow: none;
-}
-
-.logo {
-  font-size: 1.8em;
-  font-weight: bold;
-}
-
-.search-bar {
-  flex-grow: 1;
-  margin: 0 20px;
-  padding: 6px 10px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-family: 'Caveat', cursive;
-  font-size: 1.2em;
-}
-
-.user-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.avatar {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-/* 整體左右分欄 */
-.container {
-  display: flex;
-  height: calc(100vh - 60px); /* 減掉 header 高度 */
-}
-
-/* 側邊欄（地點/篩選等） */
-aside {
-  width: 250px;
-  background-color: #fff8e7;
-  padding: 20px;
   box-sizing: border-box;
-  overflow-y: auto;
-  font-size: 1.2em;
 }
 
-.sidebar ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
-}
-
-.sidebar li {
-  margin: 10px 0;
-  color: #000000;
-  font-size: 1.1em;
-}
-
-
-/* 主內容區 */
-main {
-  flex: 1;
-  padding: 20px;
-  box-sizing: border-box;
-  overflow-y: auto;
-}
-
-/* 家教卡片樣式（奶茶風） */
-.post {
-  background-color: #ffffff;
-  border: 2px dashed black;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.post-body {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-.post-left {
-  width: 120px;
-  text-align: center;
-  font-family: 'Caveat', cursive;
-}
-
-.post-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  border: 2px dashed #bfa67a;
-  margin-bottom: 10px;
-}
-
-.post-left h3 {
-  margin: 5px 0;
-  font-size: 1.3em;
-  color: #000;
-}
-
-.post-left p {
-  margin: 0;
-  font-size: 1em;
+/* —— 版面主結構 —— */
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #fff;
   color: #333;
 }
 
-.post-details ul {
-  list-style-type: disc;
-  padding-left: 20px;
-  margin: 0;
+/* —— 頂欄（白底 + 點點） —— */
+.site-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #fff;
+  background-image: radial-gradient(#ccc 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
 }
-
-.post-details li {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-  color: #3e2f1c;
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-style: italic;
+  color: #FFD54F;
 }
-
-.post-details a {
-  color: #996633;
-  text-decoration: none;
+.search-box {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.post-details a:hover {
-  text-decoration: underline;
+.search-box input {
+  width: 60%;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
 }
-
-
-.post-details strong {
-  color: #a67c52;
-}
-
-/* emoji 按鈕區 */
-.post-actions {
-  margin-top: 15px;
+.frog-icon {
   font-size: 1.5em;
-  text-align: right;
+  margin-left: 8px;
+}
+.menu-icon {
+  font-size: 1.5em;
+  margin-left: 12px;
+  color: #666;
 }
 
-/* 額外手寫感提示 */
-.handwritten {
-  font-family: "Caveat", cursive;
-  color: red;
-  margin-top: 15px;
-  font-size: 1.3em;
+/* —— 次選單（深藍無點） —— */
+.site-nav {
+  background-color: rgb(49, 64, 113);
 }
-
-/* 色彩提示 */
-.color-note {
-  margin-top: 10px;
-  color: #6a1b9a;
-  font-size: 1.2em;
+.site-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
 }
-
-/* 電話超連結樣式 */
-.post-details a {
-  color: #996633;
+.site-nav a {
   text-decoration: none;
+  font-size: 1em;
+  color: #ccc;
+}
+.site-nav .active a {
+  color: #fff;
 }
 
-.post-details a:hover {
-  text-decoration: underline;
-}
-.sidebar {
-  background-color: #ffffff;
-  padding: 20px;
-  border-right: 2px dashed black;
-  box-sizing: border-box;
-  overflow-y: auto;
+/* —— 卡片清單區（深藍底） —— */
+.card-list {
+  background-color: rgb(49, 64, 113);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
+/* —— 單張卡片 —— */
+.card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* 電話圖示容器 */
+.icon-wrapper {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(49, 64, 113);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+.icon-wrapper svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* 內容區分 上半 + 下半 */
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* 上半：左右兩欄 */
+.details {
+  display: flex;
+}
+.col-left {
+  margin-right: 40px;
+}
+.col-left .name {
+  font-size: 1.1em;
+  margin-bottom: 4px;
+}
+.col-left .date {
+  font-size: 0.95em;
+  color: #555;
+}
+.col-right p {
+  font-size: 0.95em;
+  margin-bottom: 4px;
+}
+
+/* 下半：留言圖示 + 按鈕 */
+.footer {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 12px;
+}
+.footer .icons {
+  display: flex;
+  gap: 8px;
+}
+.footer .icons .icon {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+.btn-get {
+  background-color: #E0B32F;
+  border: none;
+  border-radius: 16px;
+  padding: 6px 14px;
+  font-size: 0.95em;
+  color: #222;
+  cursor: pointer;
+}
+
+/* —— 底部（奶茶色 + 點點） —— */
+.site-footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+  background-color: #F4E1C1;
+  background-image: radial-gradient(#ccc 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+}
+.site-footer button {
+  background: none;
+  border: none;
+  font-size: 1em;
+  color: #666;
+  cursor: pointer;
+}

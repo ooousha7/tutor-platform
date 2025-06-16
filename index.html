@@ -3,107 +3,71 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>家教筆記</title>
-  <link rel="stylesheet" href="style.css">
+  <title>iCan 家教平台</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Logo</div>
-    <input type="text" placeholder="搜尋標籤..." class="search-bar">
-    <div class="user-actions">
-      <a href="#">註冊</a> |
-      <a href="#">登入</a>
-      <img src="avatar.png" alt="頭像" class="avatar">
+  <!-- 白底點點的頂欄 -->
+  <header class="site-header">
+    <div class="logo">iCan</div>
+    <div class="search-box">
+      <input type="text" placeholder="搜尋…" />
+      <span class="frog-icon">🐸</span>
     </div>
+    <div class="menu-icon">⋮</div>
   </header>
 
-  <div class="container">
-    <aside style="background-color: #e0f9ff; padding: 20px;">
-  <form id="filterForm">
-    <label for="location"><strong>地點</strong></label><br>
-    <select id="location" name="location">
-      <option value="">不限</option>
-      <option value="台北">台北</option>
-      <option value="新北">新北</option>
-      <option value="桃園">桃園</option>
-    </select><br><br>
+  <!-- 深藍的次選單 -->
+  <nav class="site-nav">
+    <ul>
+      <li><a href="#">科目</a></li>
+      <li><a href="#">價錢</a></li>
+      <li><a href="#">地點</a></li>
+      <li><a href="#">已儲存</a></li>
+      <li class="active"><a href="#">已打電話</a></li>
+    </ul>
+  </nav>
 
-    <label for="mode"><strong>方式</strong></label><br>
-    <select id="mode" name="mode">
-      <option value="">不限</option>
-      <option value="面對面">面對面</option>
-      <option value="視訊">視訊</option>
-    </select><br><br>
-
-    <label for="price"><strong>薪水範圍</strong></label><br>
-    <select id="price" name="price">
-      <option value="">不限</option>
-      <option value="600-700">600–700 元</option>
-      <option value="700-800">700–800 元</option>
-      <option value="800+">800 元以上</option>
-    </select><br><br>
-
-    <label for="subject"><strong>科目</strong></label><br>
-    <select id="subject" name="subject">
-      <option value="">不限</option>
-      <option value="英文">英文</option>
-      <option value="日文">日文</option>
-      <option value="程式語言">程式語言</option>
-    </select><br><br>
-
-    <button type="submit">搜尋</button>
-  </form>
-</aside>
-
-
-   <main>
-  <!-- 名片 1 -->
- <div class="post">
-  <div class="post-body">
-    <!-- 左邊：頭像 + 名字 + 標籤 -->
-    <div class="post-left">
-      <img src="avatar.png" class="post-avatar" />
-      <h3>王小明</h3>
-      <p>誠徵：數學家教</p>
-    </div>
-
-    <!-- 右邊：條列清單 -->
-    <div class="post-details">
-      <ul>
-        <li><strong>科目：</strong>數學</li>
-        <li><strong>地點：</strong>台北市中山區</li>
-        <li><strong>學費：</strong>時薪 600 元</li>
-        <li><strong>電話：</strong><a href="tel:0912345678">0912-345-678</a></li>
-        <li><strong>聯絡時間：</strong>週一至週五 18:00–21:00</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-
-  <!-- 名片 2 -->
-  <div class="post">
-    <div class="post-header">
-      <img src="avatar.png" class="post-avatar" />
-      <div>
-        <h3>林美麗</h3>
-        <p>誠徵：英文家教</p>
+  <!-- 深藍底的卡片清單（五筆） -->
+  <main class="card-list">
+    <!-- 1 -->
+    <div class="card">
+      <div class="icon-wrapper">
+        <svg viewBox="0 0 24 24"><path fill="#fff" d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.11-.21c1.2.5 2.53.78 3.9.78a1 1 0 011 1v3.75a1 1 0 01-1 1C10.65 21.52 2.48 13.35 2 4a1 1 0 011-1H6.75a1 1 0 011 1c0 1.37.28 2.7.78 3.9a1 1 0 01-.21 1.11l-2.2 2.2z"/></svg>
+      </div>
+      <div class="info">
+        <div class="details">
+          <div class="col-left">
+            <p class="name">王同學</p>
+            <p class="date">2025/06/18</p>
+          </div>
+          <div class="col-right">
+            <p>科目: 英文</p>
+            <p>預期學費: 1000-1500</p>
+            <p>每週幾次: 兩次</p>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="icons">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="#333" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5c0-3.03 2.47-5.5 5.5-5.5c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3C19.53 3 22 5.47 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path fill="#333" d="M6 2a2 2 0 00-2 2v18l8-5.33L20 22V4a2 2 0 00-2-2H6z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24"><path fill="#333" d="M20 2H4a2 2 0 00-2 2v14l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+          </div>
+          <button class="btn-get">Get</button>
+        </div>
       </div>
     </div>
-    <div class="post-details">
-      <p><strong>科目：</strong>英文</p>
-      <p><strong>地點：</strong>新北市新店區</p>
-      <p><strong>學費：</strong>時薪 700 元</p>
-      <p><strong>電話：</strong><a href="tel:0922112233">0922-112-233</a></p>
-      <p><strong>聯絡時間：</strong>週三、週四 19:00-21:30</p>
-    </div>
-    <div class="post-actions">
-      ❤️ 💬 📌
-    </div>
-  </div>
-</main>
+    <!-- 重複 2–5 -->
+    <div class="card">…同上…</div>
+    <div class="card">…同上…</div>
+    <div class="card">…同上…</div>
+    <div class="card">…同上…</div>
+  </main>
 
-    </main>
-  </div>
+  <!-- 奶茶色點點的底部 -->
+  <footer class="site-footer">
+    <button>註冊成為會員</button>
+    <button>儲值成為 VIP</button>
+  </footer>
 </body>
 </html>
