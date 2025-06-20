@@ -12,6 +12,10 @@ body {
   color: #333;
 }
 
+/* ------------------------------ */
+/* 以下為 nav.html 會用到的樣式 */
+/* ------------------------------ */
+
 /* —— 頂欄（白底 + 點點） —— */
 .site-header {
   display: flex;
@@ -68,6 +72,10 @@ body {
 .site-nav .active a {
   color: #fff;
 }
+
+/* ------------------------------ */
+/* 以下為主內容頁面會用到的樣式 */
+/* ------------------------------ */
 
 /* —— 卡片清單區（深藍底） —— */
 .card-list {
@@ -175,3 +183,195 @@ body {
   color: #666;
   cursor: pointer;
 }
+
+/* —— 登入表單 —— */
+form {
+  padding: 24px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+form div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+form label {
+  width: 120px;
+  font-weight: bold;
+  color: #333;
+}
+
+form input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  border: none;
+  background-color: #E0B32F;
+  color: #222;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* #login 🔵 登入頁背景（藍） */
+.backcolor-blue {
+  background-color: #315f97;
+}
+
+/* #login 勾選學生/老師 置中 */
+.role-options {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 20px;
+  margin-left: 130px; /* 往右 */
+}
+
+/* 整體背景與字體 */
+body {
+  background-color: #ffffff;
+  font-family: 'Caveat', cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(#ddd 0.5px, transparent 0.5px);
+  background-size: 16px 16px;
+  color: #333;
+}
+
+/* 註冊整體區塊 */
+.register-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border: 2px dashed #d8cfc4;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* 上方「註冊」紫色區塊 */
+.register-header {
+  background-color: #d6c9e8;
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 20px;
+}
+
+/* 身分選擇（學生/老師） */
+.identity-options {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #5a4634;
+}
+.identity-options input {
+  margin-left: 10px;
+  margin-right: 4px;
+}
+
+/* 所有欄位的 label 與輸入框 */
+.register-container label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #5a4634;
+}
+
+/* 欄位輸入框樣式 */
+.register-container input[type="text"],
+.register-container input[type="email"],
+.register-container input[type="tel"],
+.register-container input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  font-size: 1.1em;
+  font-family: 'Caveat', cursive;
+}
+
+/* 按鈕樣式（如果要加送出按鈕） */
+.register-container button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background-color: #bfa5da;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.register-container button:hover {
+  background-color: #a98bd2;
+}
+/* member 的css */
+/* —— 會員頁容器 —— */
+.member-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border: 2px dashed #d8cfc4;
+  border-radius: 10px;
+  font-family: 'Caveat', cursive, sans-serif;
+}
+
+/* —— 頁面標題 —— */
+.member-header {
+  background-color: #d7cbe8;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  border-radius: 10px 10px 0 0;
+  border-bottom: 2px dashed #aaa;
+}
+
+/* —— 表單欄位通用樣式 —— */
+.member-container label {
+  display: block;
+  margin-top: 16px;
+  font-weight: bold;
+  color: #5a4634;
+}
+
+.member-container input[type="text"],
+.member-container input[type="email"],
+.member-container input[type="tel"],
+.member-container input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f2f2f2;
+  font-family: 'Caveat', cursive;
+  font-size: 1.1em;
+}
+
+/* —— 註解說明區域 —— */
+.member-note {
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #444;
+  background-color: #f9f2ed;
+  padding: 12px;
+  border-left: 4px solid #d8cfc4;
+  border-radius: 6px;
+}
+
