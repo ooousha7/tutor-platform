@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登入</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+  <body class="backcolor-blue">
+     <!-- 統一的header -->
+        <div id="navbar"></div>
+
+ 
+    <form>
+      <!-- 身份選擇區塊 -->
+  <div>
+      <div class ="role-options">
+        <label>
+          <input type="radio" name="role" value="teacher"> 老師
+        </label>
+        <label>
+          <input type="radio" name="role" value="student"> 學生
+        </label>
+      </div>
+
+  </div>
+      <div>
+      <label for ="username">使用者名稱:</label>
+      <input type="text" id ="username" placeholder ="請輸入使用者名稱">
+      </div>
+      <div> 
+        <label for ="userpassword">使用者密碼:</label>
+        <input type="password" id ="userpassword" placeholder ="請輸入使用者密碼">
+      </div>
+    </form>   
+   <!-- 統一的header -->
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      });
+  </script>
+</body>
+</html>

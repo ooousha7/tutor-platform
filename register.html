@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>註冊 - 家教網</title>
+  <link rel="stylesheet" href="style.css"> <!-- 如果你有外部CSS檔 -->
+</head>
+<body>
+<div id="nav-placeholder"></div>
+  <div class="register-container">
+    <div class="register-header">註冊</div>
+
+    <form id="register-form">
+
+      <!-- 身分選擇 -->
+      <div class="identity-options">
+        <label>
+          <input type="checkbox" name="role" value="teacher"> 老師
+        </label>
+        <label>
+          <input type="checkbox" name="role" value="student"> 學生
+        </label>
+      </div>
+
+      <!-- 基本資料 -->
+      <label for="name">姓名：</label>
+      <input type="text" id="name" name="name" placeholder="請輸入你的名字">
+
+      <label for="gender">性別：</label>
+      <input type="text" id="gender" name="gender" placeholder="請輸入性別">
+
+      <label for="email">Email：</label>
+      <input type="email" id="email" name="email" placeholder="請輸入你的信箱">
+
+      <label for="phone">手機：</label>
+      <input type="tel" id="phone" name="phone" placeholder="請輸入手機號碼">
+
+      <label for="birthday">生日：</label>
+      <input type="date" id="birthday" name="birthday">
+
+      <!-- 卡片資訊 -->
+      <label for="card">卡號：</label>
+      <input type="text" id="card" name="card" placeholder="卡號 (4111-1111-1111-1111)">
+
+      <label for="exp-month">有效月：</label>
+      <input type="text" id="exp-month" name="exp-month" placeholder="MM">
+
+      <label for="exp-year">有效年：</label>
+      <input type="text" id="exp-year" name="exp-year" placeholder="YY">
+
+      <label for="cvc">CVC：</label>
+      <input type="text" id="cvc" name="cvc" placeholder="CVC">
+
+
+<!-- 綠界付款元件容器 -->
+<div id="ECPayPayment"></div>
+
+</form> 
+<script>
+  fetch("nav.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("nav-placeholder").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

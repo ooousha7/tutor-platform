@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 統一的header -->
+        <div id="navbar"></div>
+      <div class="member-container">
+  <div class="member-header">學生會員頁面</div>
+
+  <p>身份：學生</p>
+
+  <label>姓名：
+    <input type="text" value="李小美">
+  </label>
+  <label>e-mail：
+    <input type="email" value="student@example.com">
+  </label>
+  <label>手機：
+    <input type="tel" value="0987654321">
+  </label>
+  <label>生日：
+    <input type="date">
+  </label>
+  <label>卡號：
+    <input type="text" placeholder="信用卡卡號">
+  </label>
+  <label>通話紀錄：
+    <input type="text">
+  </label>
+  <label>儲存紀錄：
+    <input type="text">
+  </label>
+
+  <div class="member-note">
+    if 是學生：就給連結，直接留言找老師。
+  </div>
+</div>
+
+     <!-- 統一的header -->
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      });
+  </script>
+</body>
+</html>

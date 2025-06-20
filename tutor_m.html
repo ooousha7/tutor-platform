@@ -1,0 +1,54 @@
+    <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 統一的header -->
+        <div id="navbar"></div>
+<div class="member-container">
+  <div class="member-header">老師會員頁面</div>
+
+  <p>身份：老師</p>
+  <p>老師身份：VIP會員（到期日）</p>
+
+  <label>姓名：
+    <input type="text" value="王小明">
+  </label>
+  <label>e-mail：
+    <input type="email" value="teacher@example.com">
+  </label>
+  <label>手機：
+    <input type="tel" value="0912345678">
+  </label>
+  <label>生日：
+    <input type="date">
+  </label>
+  <label>卡號：
+    <input type="text" value="1234-5678-9012-3456">
+  </label>
+  <label>通話紀錄：
+    <input type="text" placeholder="例如：與學生A通話5分鐘">
+  </label>
+  <label>儲存紀錄：
+    <input type="text" placeholder="例如：學生A筆記備註">
+  </label>
+
+  <div class="member-note">
+    if 身分是老師：就給連結 [成為VIP姐所學生電話]
+  </div>
+</div>
+
+     <!-- 統一的header -->
+  <script>
+    fetch("nav.html")
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById("navbar").innerHTML = html;
+      });
+  </script>
+</body>
+</html>
